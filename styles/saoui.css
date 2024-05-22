@@ -1,10 +1,10 @@
 @font-face {
     font-family: "sao";
-    src: url(fonts/SAOUI-Regular.otf);
+    src: url(/fonts/SAOUI-Regular.otf);
 }
 
 body {
-    background-image: url("images/aincrad.jpg");
+    background-image: url("/images/aincrad.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
