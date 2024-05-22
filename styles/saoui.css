@@ -3,8 +3,15 @@
     src: url(/fonts/SAOUI-Regular.otf);
 }
 
-body {
-    background-image: url("/images/aincrad.jpg");
+.background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.default-background {
+    background-image: url('images/aincrad.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -34,6 +41,55 @@ body {
     letter-spacing: 1px;
     color: white;
 }
+
+/* -------------------------- */
+/* Side Nav                   */
+/* -------------------------- */
+
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .openBtn {
+    font-size:30px;
+    cursor:pointer;
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    margin: 10px 0px;
+    opacity: .85;
+  }
+  
+  .sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sideNav {padding-top: 15px;}
+    .sideNav a {font-size: 18px;}
+  }
+
+  .themeThumbnail img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    margin: 5px;
+    border: 2px solid white;
+  }
+
 
 /* -------------------------- */
 /* Menu                       */
@@ -72,6 +128,10 @@ body {
     width: 60px;
 }
 
+/* -------------------------- */
+/* Sub Menu                   */
+/* -------------------------- */
+
 .subMenu {
     display: none; /* Initially hidden */
     position: absolute;
@@ -105,6 +165,10 @@ body {
     width: 50px;
     margin-right: 15px;
 }
+
+/* -------------------------- */
+/* Decoration                 */
+/* -------------------------- */
 
 .arrow {
     position: absolute;

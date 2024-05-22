@@ -1,11 +1,29 @@
 function onLoad() {
     document.querySelector('#name').innerHTML = sessionStorage.getItem('name');
+    document.querySelector('#main_body').classList.add('default-background');
+}
+
+function setBackground(button) {
+    // Get the source of the clicked thumbnail
+    const imgSrc = button.querySelector('img').src;
+
+    // Set the body background image
+    const body = document.getElementById('main_body');
+    body.style.backgroundImage = `url(${imgSrc})`;
 }
 
 function onSubmit() {
     const account = document.querySelector('input[type="text"]').value;
     sessionStorage.setItem('name', account);
 }
+
+function openNav() {
+    document.getElementById("sideNav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("sideNav").style.width = "0";
+  }
 
 window.addEventListener('auxclick', function(event) {
     if (event.button == 1) {
