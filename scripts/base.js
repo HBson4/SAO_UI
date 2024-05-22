@@ -2,8 +2,17 @@ function onLoad() {
     document.querySelector('#name').innerHTML = sessionStorage.getItem('name');
     document.querySelector('#main_body').classList.add('default-background');
 
+    const videoContainer = document.getElementById('videoContainer');
     const video = document.getElementById('introVideo');
-    video.addEventListener('ended', fadeOutVideo);
+    
+    // Check if the video has already been played
+    if (sessionStorage.getItem('videoPlayed') !== 'True') {
+        videoContainer.classList.remove('closed');
+        video.addEventListener('ended', fadeOutVideo);
+        video.play();
+    } else {
+        videoContainer.classList.add('closed');
+    }
 }
 
 function fadeOutVideo() {
@@ -12,7 +21,8 @@ function fadeOutVideo() {
 
     // Remove the video container from the DOM after the transition ends
     videoContainer.addEventListener('transitionend', () => {
-        videoContainer.remove();
+        videoContainer.classList.add('closed');
+        sessionStorage.setItem('videoPlayed', 'True');
     });
 }
 
@@ -32,11 +42,11 @@ function onSubmit() {
 
 function openNav() {
     document.getElementById("sideNav").style.width = "250px";
-  }
-  
-  function closeNav() {
+}
+
+function closeNav() {
     document.getElementById("sideNav").style.width = "0";
-  }
+}
 
 window.addEventListener('auxclick', function(event) {
     if (event.button == 1) {

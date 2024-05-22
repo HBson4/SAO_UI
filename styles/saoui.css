@@ -27,6 +27,11 @@
   transition: opacity 1s ease-in-out;
 }
 
+#videoContainer.closed {
+  opacity: 0;
+  display: none;
+}
+
 #videoContainer video {
   width: 100%;
   height: 100%;
