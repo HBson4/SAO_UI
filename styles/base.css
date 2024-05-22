@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "sao";
+  src: url(/fonts/SAOUI-Regular.otf);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* -------------------------- */
+/* LOGIN                      */
+/* -------------------------- */
+
+#login_box {
+  background-color: #007BFF;
+  border: 4px solid #808080;
+  color: white;
+  border-radius: 15px;
+  padding: 25px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+h1.col_left {
+  margin: 0;
+  padding: 10px 20px;
+  flex: 1;
+  font-weight: lighter;
+  letter-spacing: 3px;
+}
+
+div.col_right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+label {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 40px;
+  border: 1px solid #cccccc;
+  margin-top: 2px;
+  font-size: 16px;
+  letter-spacing: 2px;
+
+}
+
+button[type="submit"] {
+  display: none;
+}

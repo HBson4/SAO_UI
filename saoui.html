@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <title>SAO UI</title>
+    <link rel="stylesheet" href="styles/saoui.css">
+  </head>
+
+  <body onload = "onLoad()">
+    <header>
+      <!-- Health Bar -->
+      <div id="health_bar">
+        <p id="name"></p>
+        <img id="health_bar_img" src="images/health_bar.png" alt="health bar">
+      </div>
+    </header>
+
+    <!-- SAO UI -->
+    <div id="menu" class="closed">
+      <button id="player" class="menuBtn" onclick="selectMenuBtn(this)"><img src="images/player.png" alt="Player Icon"></button>
+      <button id="friends" class="menuBtn" onclick="selectMenuBtn(this)"><img src="images/friends.png" alt="Friends Icon"></button>
+      <button id="messages" class="menuBtn" onclick="selectMenuBtn(this)"><img src="images/messages.png" alt="Messages Icon"></button>
+      <button id="location" class="menuBtn" onclick="selectMenuBtn(this)"><img src="images/location.png" alt="Maps Icon"></button>
+      <button id="settings" class="menuBtn" onclick="selectMenuBtn(this)"><img src="images/settings.png" alt="Settings Icon"></button>
+    </div>
+
+    <div id="playerSub" class="subMenu">
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/items.png" alt="Items Icon">Items</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/skills.png" alt="Skills Icon">Skills</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/equipment.png" alt="Equipment Icon">Equipment</button>
+    </div>
+
+    <div id="friendsSub" class="subMenu">
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/guild.png" alt="Guild Icon">Guild</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/party.png" alt="Party Icon">Party</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/add_friend.png" alt="Friends Icon">Friends</button>
+    </div>
+
+    <div id="messagesSub" class="subMenu">
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="" alt=""></button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="" alt=""></button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="" alt=""></button>
+    </div>
+
+    <div id="locationSub" class="subMenu">
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/field_map.png" alt="Field Icon">Field Map</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/dungeon_map.png" alt="Dungeon Icon">Dungeon Map</button>
+    </div>
+
+    <div id="settingsSub" class="subMenu">
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/help.png" alt="Help Icon">Help</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/options.png" alt="Options Icon">Options</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/logout.png" alt="Log out Icon"></button>
+    </div>
+
+    <script src="scripts/base.js"></script>
+  </body>
+</html>
