@@ -1,6 +1,19 @@
 function onLoad() {
     document.querySelector('#name').innerHTML = sessionStorage.getItem('name');
     document.querySelector('#main_body').classList.add('default-background');
+
+    const video = document.getElementById('introVideo');
+    video.addEventListener('ended', fadeOutVideo);
+}
+
+function fadeOutVideo() {
+    const videoContainer = document.getElementById('videoContainer');
+    videoContainer.style.opacity = '0';
+
+    // Remove the video container from the DOM after the transition ends
+    videoContainer.addEventListener('transitionend', () => {
+        videoContainer.remove();
+    });
 }
 
 function setBackground(button) {
