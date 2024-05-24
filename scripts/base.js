@@ -70,8 +70,14 @@ function toggleMenu() {
 
 function hideAllSubMenus() {
     const subMenus = document.querySelectorAll('.subMenu');
+    const activeButton = document.querySelector('.subMenuBtn.activeSub');
     subMenus.forEach(subMenu => {
         subMenu.style.display = 'none';
+        if (activeButton) {
+            activeButton.classList.remove('.activeSub');
+            const img = activeButton.querySelector('img');
+            img.src = img.src.replace('_on', '');
+        }
     });
 
     // Remove any existing arrow
@@ -92,6 +98,13 @@ function selectMenuBtn(button) {
         img.src = img.src.replace('_on', '');
     }
 
+    const activeSubButton = document.querySelector('.subMenuBtn.activeSub');
+    if (activeSubButton) {
+        activeSubButton.classList.remove('activeSub');
+        const img = activeSubButton.querySelector('img');
+        img.src = img.src.replace('_on', '');
+    }
+
     // Add active class to the clicked button and modify image src
     button.classList.add('active');
     const img = button.querySelector('img');
@@ -109,6 +122,25 @@ function deselectMenuBtn() {
         const img = activeButton.querySelector('img');
         img.src = img.src.replace('_on', '');
     }
+}
+
+function selectSubMenuItem(button) {
+    menuSelectSound();
+
+    // Remove active class from any currently active button and restore image src
+    const activeButton = document.querySelector('.subMenuBtn.activeSub');
+    
+    if (activeButton) {
+        activeButton.classList.remove('activeSub');
+        const img = activeButton.querySelector('img');
+        img.src = img.src.replace('_on', '');
+    }
+
+    // Add active class to the clicked button and modify image src
+    button.classList.add('activeSub');
+    const img = button.querySelector('img');
+    const newSrc = img.src.replace('.png', '_on.png');
+    img.src = newSrc;
 }
 
 function showSubMenu(menuId) {

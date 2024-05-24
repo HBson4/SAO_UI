@@ -8,9 +8,9 @@
   </head>
 
   <body id="main_body" onload="onLoad()">
-    <div id="videoContainer" class="closed">
+    <!-- <div id="videoContainer" class="closed">
       <video id="introVideo" src="video/link_start.mp4" autoplay></video>
-  </div>
+    </div> -->
 
     <header>
       <!-- Health Bar -->
@@ -42,14 +42,14 @@
 
     <!-- Sub Menus -->
     <div id="playerSub" class="subMenu">
-      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/items.png" alt="Items Icon">Items</button>
-      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/skills.png" alt="Skills Icon">Skills</button>
       <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/equipment.png" alt="Equipment Icon">Equipment</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/skills.png" alt="Skills Icon">Skills</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/items.png" alt="Items Icon">Items</button>
     </div>
     <div id="friendsSub" class="subMenu">
-      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/guild.png" alt="Guild Icon">Guild</button>
-      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/party.png" alt="Party Icon">Party</button>
       <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/add_friend.png" alt="Friends Icon">Friends</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/party.png" alt="Party Icon">Party</button>
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/guild.png" alt="Guild Icon">Guild</button>
     </div>
     <div id="messagesSub" class="subMenu">
       <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="" alt=""></button>
@@ -57,6 +57,7 @@
       <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="" alt=""></button>
     </div>
     <div id="locationSub" class="subMenu">
+      <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/quest.png" alt="Quest Icon">Quests</button>
       <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/field_map.png" alt="Field Icon">Field Map</button>
       <button class="subMenuBtn" onclick="selectSubMenuItem(this)"><img src="images/dungeon_map.png" alt="Dungeon Icon">Dungeon Map</button>
     </div>
